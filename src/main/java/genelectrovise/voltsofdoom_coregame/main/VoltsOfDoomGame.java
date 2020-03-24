@@ -2,10 +2,9 @@ package genelectrovise.voltsofdoom_coregame.main;
 
 import genelectrovise.voltsofdoom_coregame.registry.GameRegistry;
 import genelectrovise.voltsofdoom_coresystem.annotation.Mod;
-import genelectrovise.voltsofdoom_coresystem.main.IModMainClass;
 
 @Mod(modid = VoltsOfDoomGame.MODID)
-public class VoltsOfDoomGame implements IModMainClass {
+public class VoltsOfDoomGame {
 	public static final String MODID = "voltsofdoom_coregame";
 	private GameRegistry gameregistry;
 	public static VoltsOfDoomGame instance;
