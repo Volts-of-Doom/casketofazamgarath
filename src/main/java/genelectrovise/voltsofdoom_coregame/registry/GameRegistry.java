@@ -6,8 +6,8 @@ import genelectrovise.voltsofdoom_coresystem.annotation.Mod;
 import genelectrovise.voltsofdoom_coresystem.entity.Entity;
 import genelectrovise.voltsofdoom_coresystem.log.VODLog4J;
 import genelectrovise.voltsofdoom_coresystem.main.ModItemTest;
-import genelectrovise.voltsofdoom_coresystem.registry.generic.GenericRegistry;
-import genelectrovise.voltsofdoom_coresystem.registry.mod.RegistryObject;
+import genelectrovise.voltsofdoom_coresystem.registry.GenericRegistry;
+import genelectrovise.voltsofdoom_coresystem.registry.RegistryObject;
 import genelectrovise.voltsofdoom_coresystem.tile.Tile;
 
 @GenericRegistryHolder(holderId = VoltsOfDoomGame.MODID)
