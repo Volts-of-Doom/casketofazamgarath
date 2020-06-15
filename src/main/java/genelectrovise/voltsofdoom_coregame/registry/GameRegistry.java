@@ -1,14 +1,14 @@
 package genelectrovise.voltsofdoom_coregame.registry;
 
 import genelectrovise.voltsofdoom_coregame.main.VoltsOfDoomGame;
-import genelectrovise.voltsofdoom_coresystem.annotation.GenericRegistryHolder;
-import genelectrovise.voltsofdoom_coresystem.annotation.Mod;
-import genelectrovise.voltsofdoom_coresystem.entity.Entity;
-import genelectrovise.voltsofdoom_coresystem.log.VODLog4J;
-import genelectrovise.voltsofdoom_coresystem.main.ModItemTest;
-import genelectrovise.voltsofdoom_coresystem.registry.GenericRegistry;
-import genelectrovise.voltsofdoom_coresystem.registry.RegistryObject;
-import genelectrovise.voltsofdoom_coresystem.tile.Tile;
+import genelectrovise.voltsofdoom_coresystem.loading.registry.GenericRegistry;
+import genelectrovise.voltsofdoom_coresystem.loading.registry.RegistryObject;
+import genelectrovise.voltsofdoom_coresystem.play.entity.Entity;
+import genelectrovise.voltsofdoom_coresystem.play.tile.Tile;
+import genelectrovise.voltsofdoom_coresystem.universal.annotation.GenericRegistryHolder;
+import genelectrovise.voltsofdoom_coresystem.universal.annotation.Mod;
+import genelectrovise.voltsofdoom_coresystem.universal.log.VODLog4J;
+import genelectrovise.voltsofdoom_coresystem.universal.main.ModItemTest;
 
 @GenericRegistryHolder(holderId = VoltsOfDoomGame.MODID)
 public class GameRegistry {
