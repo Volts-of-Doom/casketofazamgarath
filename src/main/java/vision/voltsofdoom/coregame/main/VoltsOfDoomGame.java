@@ -1,7 +1,7 @@
-package genelectrovise.voltsofdoom_coregame.main;
+package vision.voltsofdoom.coregame.main;
 
-import genelectrovise.voltsofdoom_coregame.registry.GameRegistry;
-import genelectrovise.voltsofdoom_coresystem.universal.annotation.Mod;
+import vision.voltsofdoom.coregame.registry.GameRegistry;
+import vision.voltsofdoom.coresystem.loading.mod.Mod;
 
 @Mod(modid = VoltsOfDoomGame.MODID)
 public class VoltsOfDoomGame {
