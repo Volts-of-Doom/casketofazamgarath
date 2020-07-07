@@ -1,7 +1,7 @@
 package vision.voltsofdoom.coregame.registry;
 
-import vision.voltsofdoom.coresystem.universal.band_wagon.Event;
 import vision.voltsofdoom.coresystem.universal.band_wagon.Stowaway;
+import vision.voltsofdoom.coresystem.universal.event.LoadingEvent;
 import vision.voltsofdoom.coresystem.universal.log.VODLog4J;
 
 @Stowaway
@@ -12,12 +12,21 @@ public class GameRegistry {
 		VODLog4J.LOGGER.error("GameRegistry depopulated!");
 	}
 
-	public static void typeStowawayTest() {
+	public static void typeStowawayTestObject(Object notAnEvent) {
+
+	}
+
+	public static void typeStowawayTestNotEvent(String notAnEvent) {
 
 	}
 
 	@Stowaway
-	public static void methodStowawayTest(Event event) {
+	public static void methodStowawayTest(LoadingEvent.TestEvent event) {
+		VODLog4J.LOGGER.info("Volts of Doom Coregame (GameRegistry#methodStowawayTest) has heard a LoadingEvent.TestEvent Event!");
+	}
 
+	@Stowaway
+	public static void bandWagonCreationEvent(LoadingEvent.BandWagonCreation event) {
+		VODLog4J.LOGGER.info("Volts of Doom Coregame (GameRegistry#bandWagonCreationEvent) has heard the LoadingEvent.BandWagonCreation Event!");
 	}
 }
