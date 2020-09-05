@@ -13,6 +13,12 @@ import vision.voltsofdoom.coresystem.universal.event.RegistryEvent;
 import vision.voltsofdoom.coresystem.universal.log.Loggers;
 import vision.voltsofdoom.coresystem.universal.resource.ResourceLocation;
 
+/**
+ * Note: Please someone rewrite this before using it.
+ * 
+ * @author GenElectrovise
+ *
+ */
 @Stowaway
 public class GameRegistry {
 
