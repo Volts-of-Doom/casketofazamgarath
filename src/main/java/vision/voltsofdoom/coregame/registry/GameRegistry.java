@@ -1,6 +1,6 @@
 package vision.voltsofdoom.coregame.registry;
 
-import vision.voltsofdoom.coregame.main.VoltsOfDoomGame;
+import vision.voltsofdoom.coregame.main.CasketOfAzamgarath;
 import vision.voltsofdoom.coresystem.loading.registry.RegistryMessenger;
 import vision.voltsofdoom.coresystem.loading.registry.RegistryType;
 import vision.voltsofdoom.coresystem.loading.registry.RegistryTypes;
@@ -41,16 +41,16 @@ public class GameRegistry {
 	@Stowaway
 	private static void createRegistryTypes(RegistryEvent.CreateRegistryTypesEvent event) {
 		Loggers.MOD_DETAIL.fine("Creating RegistryTypes");
-		TILE_SECOND_TYPE = event.createRegistryType(new ResourceLocation(VoltsOfDoomGame.MODID, "tile_second"), Tile.class);
+		TILE_SECOND_TYPE = event.createRegistryType(new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"), Tile.class);
 	}
 
 	@Stowaway
 	private static void createAndSubmitTypeRegistries(RegistryEvent.CreateAndSubmitRegistriesEvent event) {
 		Loggers.MOD_DETAIL.fine("Creating and submitting TypeRegistries");
-		TILES = new TypeRegistry<Tile>(new ResourceLocation(VoltsOfDoomGame.MODID, "tiles"), RegistryTypes.TILES);
-		ENTITIES = new TypeRegistry<Entity>(new ResourceLocation(VoltsOfDoomGame.MODID, "entities"), RegistryTypes.ENTITIES);
-		TILE_SECOND = new TypeRegistry<Tile>(new ResourceLocation(VoltsOfDoomGame.MODID, "tile_second"), TILE_SECOND_TYPE);
-		ENTITY_SECOND_TO_BE_MERGED = new TypeRegistry<Entity>(new ResourceLocation(VoltsOfDoomGame.MODID, "entity_second_to_be_merged"), RegistryTypes.ENTITIES);
+		TILES = new TypeRegistry<Tile>(new ResourceLocation(CasketOfAzamgarath.MODID, "tiles"), RegistryTypes.TILES);
+		ENTITIES = new TypeRegistry<Entity>(new ResourceLocation(CasketOfAzamgarath.MODID, "entities"), RegistryTypes.ENTITIES);
+		TILE_SECOND = new TypeRegistry<Tile>(new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"), TILE_SECOND_TYPE);
+		ENTITY_SECOND_TO_BE_MERGED = new TypeRegistry<Entity>(new ResourceLocation(CasketOfAzamgarath.MODID, "entity_second_to_be_merged"), RegistryTypes.ENTITIES);
 		event.submit(TILES);
 		event.submit(ENTITIES);
 		event.submit(TILE_SECOND);
@@ -60,12 +60,12 @@ public class GameRegistry {
 	@Stowaway
 	private static void populateTypeRegistriesEventListener(RegistryEvent.PopulateTypeRegistriesEvent event) {
 		Loggers.MOD_DETAIL.fine("Populating TypeRegistries");
-		test_tile = TILES.register(new ResourceLocation(VoltsOfDoomGame.MODID, "test_tile"), () -> new Tile(Tile.Archetype.COBBLE));
+		test_tile = TILES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "test_tile"), () -> new Tile(Tile.Archetype.COBBLE));
 
-		test_tile_second = TILE_SECOND.register(new ResourceLocation(VoltsOfDoomGame.MODID, "tile_second"), () -> new Tile(Tile.Archetype.WOODLOG));
+		test_tile_second = TILE_SECOND.register(new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"), () -> new Tile(Tile.Archetype.WOODLOG));
 
-		test_entity = ENTITIES.register(new ResourceLocation(VoltsOfDoomGame.MODID, "entity"), () -> new Entity(Entity.Archetype.ENTITYBLOB));
-		test_entity_merged = ENTITY_SECOND_TO_BE_MERGED.register(new ResourceLocation(VoltsOfDoomGame.MODID, "entity_second"), () -> new Entity(Entity.Archetype.ENTITYBLOB));
+		test_entity = ENTITIES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "entity"), () -> new Entity(Entity.Archetype.ENTITYBLOB));
+		test_entity_merged = ENTITY_SECOND_TO_BE_MERGED.register(new ResourceLocation(CasketOfAzamgarath.MODID, "entity_second"), () -> new Entity(Entity.Archetype.ENTITYBLOB));
 	}
 
 	@Stowaway
