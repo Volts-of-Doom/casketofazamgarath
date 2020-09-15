@@ -6,7 +6,7 @@
 	<groupId>vision.voltsofdoom</groupId>
 	<artifactId>casketofazamgarath</artifactId>
 	<version>0.0.1</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>casketofazamgarath</name>
 	<url>http://maven.apache.org</url>
