@@ -1,17 +1,17 @@
 package vision.voltsofdoom.coregame.registry;
 
 import vision.voltsofdoom.coregame.main.CasketOfAzamgarath;
-import vision.voltsofdoom.coresystem.loading.registry.RegistryMessenger;
-import vision.voltsofdoom.coresystem.loading.registry.RegistryType;
-import vision.voltsofdoom.coresystem.loading.registry.RegistryTypes;
-import vision.voltsofdoom.coresystem.loading.registry.TypeRegistry;
 import vision.voltsofdoom.coresystem.play.entity.Entity;
 import vision.voltsofdoom.coresystem.play.tile.Tile;
-import vision.voltsofdoom.coresystem.universal.band_wagon.Stowaway;
-import vision.voltsofdoom.coresystem.universal.event.LoadingEvent;
-import vision.voltsofdoom.coresystem.universal.event.RegistryEvent;
+import vision.voltsofdoom.coresystem.universal.registry.RegistryTypes;
+import vision.voltsofdoom.zapbyte.bandwagon.Stowaway;
+import vision.voltsofdoom.zapbyte.event.LoadingEvent;
+import vision.voltsofdoom.zapbyte.event.RegistryEvent;
+import vision.voltsofdoom.zapbyte.loading.registry.RegistryMessenger;
+import vision.voltsofdoom.zapbyte.loading.registry.RegistryType;
+import vision.voltsofdoom.zapbyte.loading.registry.TypeRegistry;
 import vision.voltsofdoom.zapbyte.log.Loggers;
-import vision.voltsofdoom.zapbyte.misc.ResourceLocation;
+import vision.voltsofdoom.zapbyte.resource.ResourceLocation;
 
 /**
  * Note: Please someone rewrite this before using it.

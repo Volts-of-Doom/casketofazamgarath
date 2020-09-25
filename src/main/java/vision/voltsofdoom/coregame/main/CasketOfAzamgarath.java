@@ -1,7 +1,7 @@
 package vision.voltsofdoom.coregame.main;
 
 import vision.voltsofdoom.coregame.registry.GameRegistry;
-import vision.voltsofdoom.coresystem.loading.mod.Mod;
+import vision.voltsofdoom.zapbyte.loading.mod.Mod;
 
 @Mod(modid = CasketOfAzamgarath.MODID)
 public class CasketOfAzamgarath {
