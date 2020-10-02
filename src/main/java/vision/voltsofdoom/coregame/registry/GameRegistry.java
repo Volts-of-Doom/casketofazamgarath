@@ -29,10 +29,11 @@ public class GameRegistry {
   public static TypeRegistry<Tile> TILES;
   public static TypeRegistry<Entity> ENTITIES;
 
-  public static RegistryMessenger<Tile> test_tile;
+  public static RegistryMessenger<Tile> casket_of_azamgarath_test_tile;
   public static RegistryMessenger<Tile> test_tile_second;
   public static RegistryMessenger<Entity> test_entity;
   public static RegistryMessenger<Entity> test_entity_merged;
+  public static RegistryMessenger<Tile> coresystem_example_tile;
 
   public GameRegistry() {
     Loggers.MOD.info(
@@ -69,15 +70,22 @@ public class GameRegistry {
   private static void populateTypeRegistriesEventListener(
       RegistryEvent.PopulateTypeRegistriesEvent event) {
     Loggers.MOD_DETAIL.fine("Populating TypeRegistries");
-    test_tile = TILES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "test_tile"),
-        () -> new Tile(Tile.Archetype.COBBLE));
+
+    // Tiles
+    casket_of_azamgarath_test_tile = TILES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "test_tile"),
+        () -> new Tile(new Tile.Properties().setAnimated(false).setImage(null)));
+
+    coresystem_example_tile = TILES.register(new ResourceLocation("coresystem", "example_tile"),
+        () -> new Tile(new Tile.Properties().setAnimated(true).setImage(null)));
 
     test_tile_second =
         TILE_SECOND.register(new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"),
             () -> new Tile(Tile.Archetype.WOODLOG));
 
+    // Entities
     test_entity = ENTITIES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "entity"),
         () -> new Entity(Entity.Archetype.ENTITYBLOB));
+    
     test_entity_merged = ENTITY_SECOND_TO_BE_MERGED.register(
         new ResourceLocation(CasketOfAzamgarath.MODID, "entity_second"),
         () -> new Entity(Entity.Archetype.ENTITYBLOB));
@@ -85,8 +93,8 @@ public class GameRegistry {
 
   @Stowaway
   private static void loadingDone(RegistryEvent.LoadingDoneEvent event) {
-    System.out.println("Test tile" + test_tile.get());
-    test_tile.get();
+    System.out.println("Test tile" + casket_of_azamgarath_test_tile.get());
+    casket_of_azamgarath_test_tile.get();
   }
 
   // DEBUG
