@@ -73,22 +73,22 @@ public class GameRegistry {
 
     // Tiles
     casket_of_azamgarath_test_tile = TILES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "test_tile"),
-        () -> new Tile(new Tile.Properties().setAnimated(false).setImage(null)));
+        () -> new Tile());
 
     coresystem_example_tile = TILES.register(new ResourceLocation("coresystem", "example_tile"),
-        () -> new Tile(new Tile.Properties().setAnimated(true).setImage(null)));
+        () -> new Tile());
 
     test_tile_second =
         TILE_SECOND.register(new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"),
-            () -> new Tile(Tile.Archetype.WOODLOG));
+            () -> new Tile());
 
     // Entities
     test_entity = ENTITIES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "entity"),
-        () -> new Entity(Entity.Archetype.ENTITYBLOB));
+        () -> new Entity());
     
     test_entity_merged = ENTITY_SECOND_TO_BE_MERGED.register(
         new ResourceLocation(CasketOfAzamgarath.MODID, "entity_second"),
-        () -> new Entity(Entity.Archetype.ENTITYBLOB));
+        () -> new Entity());
   }
 
   @Stowaway
