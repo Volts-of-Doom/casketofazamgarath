@@ -4,9 +4,9 @@ import vision.voltsofdoom.coregame.main.CasketOfAzamgarath;
 import vision.voltsofdoom.coresystem.play.entity.Entity;
 import vision.voltsofdoom.coresystem.play.tile.Tile;
 import vision.voltsofdoom.coresystem.universal.registry.RegistryTypes;
-import vision.voltsofdoom.zapbyte.bandwagon.Stowaway;
 import vision.voltsofdoom.zapbyte.event.LoadingEvent;
 import vision.voltsofdoom.zapbyte.event.RegistryEvent;
+import vision.voltsofdoom.zapbyte.event.Stowaway;
 import vision.voltsofdoom.zapbyte.loading.registry.RegistryMessenger;
 import vision.voltsofdoom.zapbyte.loading.registry.RegistryType;
 import vision.voltsofdoom.zapbyte.loading.registry.TypeRegistry;
@@ -72,23 +72,21 @@ public class GameRegistry {
     Loggers.MOD_DETAIL.fine("Populating TypeRegistries");
 
     // Tiles
-    casket_of_azamgarath_test_tile = TILES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "test_tile"),
-        () -> new Tile());
+    casket_of_azamgarath_test_tile = TILES
+        .register(new ResourceLocation(CasketOfAzamgarath.MODID, "test_tile"), () -> new Tile());
 
-    coresystem_example_tile = TILES.register(new ResourceLocation("coresystem", "example_tile"),
-        () -> new Tile());
+    coresystem_example_tile =
+        TILES.register(new ResourceLocation("coresystem", "example_tile"), () -> new Tile());
 
-    test_tile_second =
-        TILE_SECOND.register(new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"),
-            () -> new Tile());
+    test_tile_second = TILE_SECOND
+        .register(new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"), () -> new Tile());
 
     // Entities
     test_entity = ENTITIES.register(new ResourceLocation(CasketOfAzamgarath.MODID, "entity"),
         () -> new Entity());
-    
+
     test_entity_merged = ENTITY_SECOND_TO_BE_MERGED.register(
-        new ResourceLocation(CasketOfAzamgarath.MODID, "entity_second"),
-        () -> new Entity());
+        new ResourceLocation(CasketOfAzamgarath.MODID, "entity_second"), () -> new Entity());
   }
 
   @Stowaway
