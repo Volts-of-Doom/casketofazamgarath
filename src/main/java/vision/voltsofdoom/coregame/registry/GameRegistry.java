@@ -91,8 +91,7 @@ public class GameRegistry {
 
   @Stowaway
   private static void loadingDone(RegistryEvent.LoadingDoneEvent event) {
-    System.out.println("Test tile" + casket_of_azamgarath_test_tile.get());
-    casket_of_azamgarath_test_tile.get();
+    System.out.println("Test tile (coa_test_tile): " + casket_of_azamgarath_test_tile.get());
   }
 
   // DEBUG
