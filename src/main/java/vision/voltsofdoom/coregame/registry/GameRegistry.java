@@ -1,16 +1,15 @@
 package vision.voltsofdoom.coregame.registry;
 
 import vision.voltsofdoom.coregame.main.CasketOfAzamgarath;
-import vision.voltsofdoom.coresystem.play.entity.Entity;
-import vision.voltsofdoom.coresystem.play.tile.Tile;
-import vision.voltsofdoom.coresystem.universal.registry.RegistryTypes;
+import vision.voltsofdoom.voltsofdoom.play.entity.Entity;
+import vision.voltsofdoom.voltsofdoom.play.tile.Tile;
+import vision.voltsofdoom.voltsofdoom.universal.registry.RegistryTypes;
 import vision.voltsofdoom.zapbyte.event.LoadingEvent;
 import vision.voltsofdoom.zapbyte.event.RegistryEvent;
 import vision.voltsofdoom.zapbyte.event.Stowaway;
 import vision.voltsofdoom.zapbyte.loading.registry.RegistryMessenger;
 import vision.voltsofdoom.zapbyte.loading.registry.RegistryType;
 import vision.voltsofdoom.zapbyte.loading.registry.TypeRegistry;
-import vision.voltsofdoom.zapbyte.log.Loggers;
 import vision.voltsofdoom.zapbyte.resource.ResourceLocation;
 
 /**
@@ -36,13 +35,13 @@ public class GameRegistry {
   public static RegistryMessenger<Tile> coresystem_example_tile;
 
   public GameRegistry() {
-    Loggers.MOD.info(
+    CasketOfAzamgarath.LOGGER.info(
         "Found Volts Of Doom (coregame) GameRegistry successfully. Let's load some registries!");
   }
 
   @Stowaway
   private static void createRegistryTypes(RegistryEvent.CreateRegistryTypesEvent event) {
-    Loggers.MOD_DETAIL.fine("Creating RegistryTypes");
+    CasketOfAzamgarath.LOGGER.debug("Creating RegistryTypes");
     TILE_SECOND_TYPE = event.createRegistryType(
         new ResourceLocation(CasketOfAzamgarath.MODID, "tile_second"), Tile.class);
   }
@@ -50,7 +49,7 @@ public class GameRegistry {
   @Stowaway
   private static void createAndSubmitTypeRegistries(
       RegistryEvent.CreateAndSubmitRegistriesEvent event) {
-    Loggers.MOD_DETAIL.fine("Creating and submitting TypeRegistries");
+    CasketOfAzamgarath.LOGGER.debug("Creating and submitting TypeRegistries");
     TILES = new TypeRegistry<Tile>(new ResourceLocation(CasketOfAzamgarath.MODID, "tiles"),
         RegistryTypes.TILES);
     ENTITIES = new TypeRegistry<Entity>(new ResourceLocation(CasketOfAzamgarath.MODID, "entities"),
@@ -69,7 +68,7 @@ public class GameRegistry {
   @Stowaway
   private static void populateTypeRegistriesEventListener(
       RegistryEvent.PopulateTypeRegistriesEvent event) {
-    Loggers.MOD_DETAIL.fine("Populating TypeRegistries");
+    CasketOfAzamgarath.LOGGER.debug("Populating TypeRegistries");
 
     // Tiles
     casket_of_azamgarath_test_tile = TILES
@@ -106,13 +105,13 @@ public class GameRegistry {
 
   @Stowaway
   public static void methodStowawayTest(LoadingEvent.TestEvent event) {
-    Loggers.MOD_DETAIL.fine(
+    CasketOfAzamgarath.LOGGER.debug(
         "Volts of Doom Coregame (GameRegistry#methodStowawayTest) has heard a LoadingEvent.TestEvent Event!");
   }
 
   @Stowaway
   public static void bandWagonCreationEvent(LoadingEvent.BandWagonCreation event) {
-    Loggers.MOD_DETAIL.fine(
+    CasketOfAzamgarath.LOGGER.debug(
         "Volts of Doom Coregame (GameRegistry#bandWagonCreationEvent) has heard the LoadingEvent.BandWagonCreation Event!");
   }
 }
