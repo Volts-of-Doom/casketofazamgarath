@@ -1,5 +1,7 @@
 package vision.voltsofdoom.coregame.registry;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vision.voltsofdoom.coregame.main.CasketOfAzamgarath;
 import vision.voltsofdoom.voltsofdoom.play.entity.Entity;
 import vision.voltsofdoom.voltsofdoom.play.tile.Tile;
@@ -7,9 +9,9 @@ import vision.voltsofdoom.voltsofdoom.universal.registry.RegistryTypes;
 import vision.voltsofdoom.zapbyte.event.LoadingEvent;
 import vision.voltsofdoom.zapbyte.event.RegistryEvent;
 import vision.voltsofdoom.zapbyte.event.Stowaway;
-import vision.voltsofdoom.zapbyte.loading.registry.RegistryMessenger;
-import vision.voltsofdoom.zapbyte.loading.registry.RegistryType;
-import vision.voltsofdoom.zapbyte.loading.registry.TypeRegistry;
+import vision.voltsofdoom.zapbyte.registry.RegistryMessenger;
+import vision.voltsofdoom.zapbyte.registry.RegistryType;
+import vision.voltsofdoom.zapbyte.registry.TypeRegistry;
 import vision.voltsofdoom.zapbyte.resource.ResourceLocation;
 
 /**
@@ -20,6 +22,8 @@ import vision.voltsofdoom.zapbyte.resource.ResourceLocation;
  */
 @Stowaway
 public class GameRegistry {
+  
+  private static final Logger LOGGER = LoggerFactory.getLogger(GameRegistry.class);
 
   public static RegistryType<Tile> TILE_SECOND_TYPE;
 
@@ -90,7 +94,7 @@ public class GameRegistry {
 
   @Stowaway
   private static void loadingDone(RegistryEvent.LoadingDoneEvent event) {
-    System.out.println("Test tile (coa_test_tile): " + casket_of_azamgarath_test_tile.get());
+    LOGGER.info("TEST: Test tile (coa_test_tile): " + casket_of_azamgarath_test_tile.get());
   }
 
   // DEBUG
