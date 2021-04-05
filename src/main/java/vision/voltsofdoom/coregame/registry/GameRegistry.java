@@ -9,9 +9,9 @@ import vision.voltsofdoom.voltsofdoom.universal.registry.RegistryTypes;
 import vision.voltsofdoom.zapbyte.event.LoadingEvent;
 import vision.voltsofdoom.zapbyte.event.RegistryEvent;
 import vision.voltsofdoom.zapbyte.event.Stowaway;
-import vision.voltsofdoom.zapbyte.registry.RegistryMessenger;
-import vision.voltsofdoom.zapbyte.registry.RegistryType;
-import vision.voltsofdoom.zapbyte.registry.TypeRegistry;
+import vision.voltsofdoom.zapbyte.loading.registry.RegistryMessenger;
+import vision.voltsofdoom.zapbyte.loading.registry.RegistryType;
+import vision.voltsofdoom.zapbyte.loading.registry.TypeRegistry;
 import vision.voltsofdoom.zapbyte.resource.ResourceLocation;
 
 /**

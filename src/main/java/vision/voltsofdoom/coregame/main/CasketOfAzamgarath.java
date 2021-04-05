@@ -3,7 +3,7 @@ package vision.voltsofdoom.coregame.main;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import vision.voltsofdoom.coregame.registry.GameRegistry;
-import vision.voltsofdoom.zapbyte.mod.Mod;
+import vision.voltsofdoom.zapbyte.loading.mod.Mod;
 
 @Mod(modid = CasketOfAzamgarath.MODID)
 public class CasketOfAzamgarath {
