@@ -9,7 +9,7 @@ import vision.voltsofdoom.zapbyte.bandwagon.Stowaway;
 import vision.voltsofdoom.zapbyte.bandwagon.event.LoadingDoneEvent;
 import vision.voltsofdoom.zapbyte.bandwagon.event.LoadingEvent;
 import vision.voltsofdoom.zapbyte.registry.IRegistryMessenger2;
-import vision.voltsofdoom.zapbyte.resource.ResourceLocation;
+import vision.voltsofdoom.zapbyte.resource.ID;
 
 /**
  * Note: Please someone rewrite this before using it.
@@ -25,7 +25,7 @@ public class GameRegistry {
   public GameRegistry() {
     CasketOfAzamgarath.LOGGER.info("Found Volts Of Doom (coregame) GameRegistry successfully. Let's load some registries!");
 
-    IRegistryMessenger2<Tile> messenger = VoltsOfDoom.getInstance().getRegistry().register(new ResourceLocation("temp", "temp_e"), () -> new Tile(), Tile.class);
+    IRegistryMessenger2<Tile> messenger = VoltsOfDoom.getInstance().getRegistry().register(new ID("temp", "temp_e"), () -> new Tile(), Tile.class);
     
     @SuppressWarnings("unused")
     Tile tile = messenger.get();
