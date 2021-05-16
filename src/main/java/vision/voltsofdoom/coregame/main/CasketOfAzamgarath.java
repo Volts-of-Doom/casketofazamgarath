@@ -11,7 +11,8 @@ public class CasketOfAzamgarath {
   private GameRegistry gameRegistry;
   public static CasketOfAzamgarath instance;
   
-  public static Logger LOGGER = LoggerFactory.getLogger(CasketOfAzamgarath.class);
+  @SuppressWarnings("unused")
+  private static final Logger LOGGER = LoggerFactory.getLogger(CasketOfAzamgarath.class);
 
   public CasketOfAzamgarath() {
     gameRegistry = new GameRegistry();
@@ -21,7 +22,4 @@ public class CasketOfAzamgarath {
     return gameRegistry;
   }
 
-  public String getModid() {
-    return "vod_coregame";
-  }
 }
