@@ -30,8 +30,6 @@ public class GameRegistry {
     @SuppressWarnings("unused")
     Tile tile = messenger.get();
     
-    System.out.println("210421 : " + messenger.get());
-    
   }
 
   @Stowaway
