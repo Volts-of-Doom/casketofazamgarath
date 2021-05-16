@@ -2,6 +2,7 @@ package vision.voltsofdoom.coregame.registry;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vision.voltsofdoom.coregame.main.CasketOfAzamgarath;
 import vision.voltsofdoom.voltsofdoom.VoltsOfDoom;
 import vision.voltsofdoom.voltsofdoom.tile.Tile;
 import vision.voltsofdoom.zapbyte.bandwagon.Stowaway;
@@ -20,12 +21,13 @@ import vision.voltsofdoom.zapbyte.resource.ID;
 public class GameRegistry {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(GameRegistry.class);
+  
+  public static final IRegistryMessenger2<Tile> temporary_messenger = VoltsOfDoom.getInstance().getRegistry().register(new ID(CasketOfAzamgarath.MODID, "temporary_messenger"), () -> new Tile(), Tile.class);
 
   public GameRegistry() {
-    IRegistryMessenger2<Tile> messenger = VoltsOfDoom.getInstance().getRegistry().register(new ID("temp", "temp_e"), () -> new Tile(), Tile.class);
     
     @SuppressWarnings("unused")
-    Tile tile = messenger.get();
+    Tile tile = temporary_messenger.get();
     
   }
 
